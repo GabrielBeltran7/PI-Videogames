@@ -1,0 +1,29 @@
+.SearchBar{
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px;
+    width: 500px;
+    border-width:1px;
+    border-color: rgb(3, 12, 12);
+}.center{
+    display: flex;
+  justify-content: center;
+  background-color: #242222;
+  
+}.div{
+    
+    justify-content: center;
+    background-color: rgb(3, 3, 3);
+}
+.btn{
+    background-color: #242222;
+    padding: 0.8rem;
+    border-radius: 5rem;
+    border-color: red;
+    color:white;
+    width: 7rem;
+}
+.btn:hover{
+    background-color: rgba(0, 255, 76, 0.918);
+    color:rgb(235, 14, 243)
+}

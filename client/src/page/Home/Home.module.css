@@ -1,0 +1,17 @@
+.containerhome{
+  
+    align-items: center;
+    background-color: black;
+  
+    
+
+}.label{
+    color: white;
+    font-size: x-large;
+}.select{
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 7px;
+    
+    margin-right: 20px;
+}

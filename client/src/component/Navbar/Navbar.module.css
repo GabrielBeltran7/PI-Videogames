@@ -1,0 +1,50 @@
+
+.container{
+    
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: #030101;
+   
+    display: flex;
+    
+}
+
+
+
+.page {
+    display: block;
+    color: rgb(247, 244, 244);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4%;
+
+}
+
+.page:hover {
+    cursor: pointer;
+    background-color: #555757f6;
+}
+.imgcontainer img{
+    width: 3rem;
+    margin: 8px;
+
+
+}
+
+.linkcontainer{
+    display: flex;
+    width:25rem;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+
+
+

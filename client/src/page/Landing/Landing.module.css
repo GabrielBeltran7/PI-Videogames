@@ -1,0 +1,37 @@
+
+
+.imghome {
+   
+    height: 100vh;
+    padding: 20em;
+    box-sizing: border-box;
+   
+    background: linear-gradient(rgba(10, 154, 197, 0.048),
+            rgba(224, 7, 25, 0)), url('../../imghome/imghome.png') center center no-repeat;
+    background-size: cover;
+}
+
+.btn
+{
+    position: absolute;top: 93%;
+   
+  
+    height: 5vh;
+    width: 15vh;
+    background-color:  transparent;
+    color: rgba(228, 224, 16, 0.993);
+    border-radius: 8%;
+    font-size:medium;
+   
+}
+.btn:hover
+{
+   background-color: rgba(255, 0, 13, 0.918);
+    cursor: pointer;
+}
+
+
+
+
+
+
