@@ -7,7 +7,10 @@ let initialState = {
     videogamesxname: [],
     videogamesOrder: [],
     allVideogamesdbapi:[],
- 
+    allVideogamesOrder:[],
+   
+   
+
     filters: false
 
 }
@@ -64,8 +67,8 @@ function rootReducer(state = initialState, action) {
             if (action.payload === "asc") {
                 return {
                     ...state,
-                  
-                    allVideogames: [...state.allVideogames].sort((prev, next) => {
+                    filters: true,
+                    allVideogamesOrder: [...state.allVideogames].sort((prev, next) => {
                         if (prev.name > next.name) return 1
                         if (prev.name < next.name) return -1
                         return 0
@@ -75,8 +78,8 @@ function rootReducer(state = initialState, action) {
             } else if (action.payload === "des") {
                 return {
                     ...state,
-                   
-                    allVideogames: [...state.allVideogames].sort((prev, next) => {
+                    filters: true,
+                    allVideogamesOrder: [...state.allVideogames].sort((prev, next) => {
                         if (prev.name > next.name) return -1
                         if (prev.name < next.name) return 1
                         return 0
@@ -89,20 +92,22 @@ function rootReducer(state = initialState, action) {
             else if (action.payload === "rating") {
                 return {
                     ...state,
-                    
-                    allVideogames: [...state.allVideogames].sort((prev, next) => {
+                    filters: true,
+                    allVideogamesOrder: [...state.allVideogames].sort((prev, next) => {
                         if (prev.rating > next.rating) return -1
                         if (prev.rating < next.rating) return 1
                         return 0
                     })
 
                 }
+
+
             }
             else if (action.payload === "menorrating") {
                 return {
                     ...state,
-                   
-                    allVideogames: [...state.allVideogames].sort((prev, next) => {
+                    filters: true,
+                    allVideogamesOrder: [...state.allVideogames].sort((prev, next) => {
                         if (prev.rating > next.rating) return 1
                         if (prev.rating < next.rating) return -1
                         return 0
@@ -116,24 +121,22 @@ function rootReducer(state = initialState, action) {
 
             case FILTER_GAMES_DB_API:  
              if (action.payload === "Api") {
-                const GamesDB = [...state.allVideogames]; 
+                const GamesDBAPI = [...state.allVideogames]; 
 
-                const api = GamesDB.filter((game)=> game.id >0)
+                const db = GamesDBAPI.filter((game)=> game.id >0)
                 return {
                     ...state,
-                    filters: true,
-                    allVideogamesdbapi: api,
+                    allVideogamesdbapi: db,
 
             } 
 
         } else  if (action.payload === "Database") {
-            const GamesAPI = [...state.allVideogames]; 
+            const GamesDBAPI = [...state.allVideogames]; 
 
-            const db = GamesAPI.filter((game)=> game.id.length >0)
+            const dbapi = GamesDBAPI.filter((game)=> game.id.length >0)
             return {
                 ...state,
-                filters: true,
-                allVideogamesdbapi: db,
+                allVideogamesdbapi: dbapi,
 
         } 
 

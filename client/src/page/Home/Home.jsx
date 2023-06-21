@@ -10,8 +10,7 @@ import { useSelector } from 'react-redux'
 
 const Home = () => {
   const allVideogamesdbapi = useSelector((state)=> state.allVideogamesdbapi)
-  const filters = useSelector((state)=> state.filters)
-  const allVideogames = useSelector((state)=> state.allVideogames)
+  const allVideogames = useSelector((state)=> state.allVideogamesdb)
   const dispatch = useDispatch()
   
 
@@ -64,13 +63,10 @@ const FilterDbApi = (event)=>{
   <div> 
   <div >{<SearchBar/>}</div>
   </div>
+  
+  
   {console.log("DBAPI", allVideogamesdbapi)}
-
-  {console.log("GAMESTODOS", allVideogames)}
-
-  {filters? <Cards  allVideogames={allVideogamesdbapi} />:<Cards  allVideogames={allVideogames} /> }
- 
-
+  <Cards   />
     
     </div>
   )
